@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurante Mexicano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body style="margin-top: 100px;">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container-fluid d-flex justify-content-between align-items-center p-3 px-5">
+        <!-- Logo completamente a la izquierda -->
+        <img src="logo.png" class="d-block" alt="" style="width: 10%;">
+
+        <!-- Menú centrado -->
+        <div class="collapse navbar-collapse d-flex justify-content-between w-100 px-5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fs-5" href="#menu">Menú</a></li>
+                <li class="nav-item"><a class="nav-link fs-5" href="#reservar">Reservar</a></li>
+                <li class="nav-item"><a class="nav-link fs-5" href="#reservar">Hubicacion</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Slider -->
+    <div class="container d-flex, justify-content-center y align-items-center">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="imagenes/slider2.png" class="d-block w-100 mx-auto" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="imagenes/slider1.png" class="d-block w-100 mx-auto" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/slider3.png" class="d-block w-100 mx-auto" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    
+
+    <!-- Menú -->
+        <section id="menu" class="menu-section text-left p-5">
+            <div class="container-fluid text-center p-3" style="background-color: rgb(35, 20, 15); border-top-left-radius: 3rem; border-top-right-radius: 3rem;">
+                <div class="row align-items-center position-relative">
+                    <!-- Imagen izquierda -->
+                    <div class="col-3 ps-3">
+                        <img src="imagenes/decoIsq.png" class="img-fluid" style="max-width: 150px;" alt="deco izquierda">
+                    </div>
+                    
+                    <!-- Título Menú -->
+                    <div class="col-6">
+                        <h1 class="p-3 m-0" style="border-bottom: 2px solid rgb(0,170,175);">Menú</h1>
+                    </div>
+                    
+                    <!-- Imagen derecha -->
+                    <div class="col-3 pe-3">
+                        <img src="imagenes/decoDer.png" class="img-fluid" style="max-width: 150px;" alt="deco derecha">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container-fluid" style="background-color: rgb(35, 20, 15);">
+
+        <div class="container">
+            <h2 class="p-3 text-left">Comidas</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card animate">
+                        <img src="imagenes/enchiladas.jpg" class="card-img-top" alt="Enchiladas">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Enchiladas</h5>
+                            <p class="card-text text-center">Deliciosas enchiladas con salsa roja o verde, acompañadas de queso y crema.</p>
+                            <p class="card-text text-center"><strong>$120</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card animate">
+                        <img src="imagenes/huaraches.jpg" class="card-img-top" alt="Huaraches">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Huaraches</h5>
+                            <p class="card-text text-center">Masa de maíz con frijoles, cubierto de carne, lechuga, queso y salsa.</p>
+                            <p class="card-text text-center"><strong>$85</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card animate">
+                        <img src="imagenes/tacos.jpg" class="card-img-top" alt="Tacos">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Tacos</h5>
+                            <p class="card-text text-center">Tortillas de maíz rellenas de carne asada, pastor o suadero, con cebolla y cilantro.</p>
+                            <p class="card-text text-center"><strong>$20 c/u</strong></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid p-4" style="background-color: rgb(35, 20, 15); border-bottom-right-radius: 3rem; border-bottom-left-radius: 3rem;">
+            <div class="container">
+                <h2 class="p-3 text-light">Bebidas</h2>
+                <div class="row">
+                    <!-- Trago 1: Cosmo Mexicano -->
+                    <div class="col-md-4">
+                        <div class="card animate">
+                            <img src="imagenes/cosmoMexicano.png" class="card-img-top" alt="Cosmo Mexicano">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Cosmo Mexicano</h5>
+                                <p class="card-text text-center">Una versión mexicana del clásico Cosmopolitan, con tequila, licor de naranja y un toque de lima.</p>
+                                <p class="card-text text-center"><strong>$150</strong></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Trago 2: Cosmopolitan -->
+                    <div class="col-md-4">
+                        <div class="card animate">
+                            <img src="imagenes/tequilasunrise.png" class="card-img-top" alt="Cosmopolitan">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Cosmopolitan</h5>
+                                <p class="card-text text-center">Elegante y refrescante cóctel a base de vodka, licor de naranja, jugo de arándano y un toque de limón.</p>
+                                <p class="card-text text-center"><strong>$140</strong></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Trago 3: Margarita -->
+                    <div class="col-md-4">
+                        <div class="card animate">
+                            <img src="imagenes/margarita.png" class="card-img-top" alt="Margarita">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Margarita</h5>
+                                <p class="card-text text-center">El clásico mexicano con tequila, licor de naranja y jugo de lima, servido en un vaso escarchado con sal.</p>
+                                <p class="card-text text-center"><strong>$130</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <section id="reservar" class="form-section text-center w-100 mt-5">
+        <h2>Reservar una Mesa</h2>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagen izquierda -->
+                <div class="col-12 col-md-2 d-flex justify-content-start">
+                    <img src="imgForDer.png" class="d-block w-50" alt="Comida Mexicana">
+                </div>
+    
+                <!-- Formulario -->
+                <div class="col-12 col-md-8 d-flex flex-column align-items-center">
+                    <form class="w-75" action="your-form-handler.php" method="POST">
+                        <div class="mb-3">
+                            <input type="text" class="form-control animate" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control animate" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" class="form-control animate" required>
+                        </div>
+                        <button type="submit" class="btn btn-light animate">Reservar</button>
+                    </form>
+    
+                    <!-- Imagen del taco con estrellas -->
+                    <div class="image-container mt-4 position-relative">
+                        <img src="taco.png" class="img-fluid w-50" alt="Comida Mexicana" id="taco">
+                        <div class="stars position-absolute top-50 start-50 translate-middle">
+                            <!-- Aquí puedes agregar las estrellas como elementos de imagen o usar CSS para crear las estrellas -->
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Imagen derecha -->
+                <div class="col-12 col-md-2 d-flex justify-content-end">
+                    <img src="imgForIsq.png" class="d-block w-50" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const starContainer = document.querySelector(".stars");
+
+    setInterval(() => {
+        const star = document.createElement("div");
+        star.classList.add("star");
+
+        // Generar una posición aleatoria centrada
+        const containerWidth = starContainer.offsetWidth;
+        const starWidth = 8;  // El tamaño de la estrella
+        const maxLeft = containerWidth - starWidth;  // Calcular el límite de la posición horizontal
+        const randomLeft = Math.random() * (maxLeft * 0.6) + (maxLeft * 0.2); // Estrellas centradas
+
+        const randomDuration = Math.random() * 1 + 1; // Duración aleatoria entre 1 y 2 segundos
+
+        star.style.left = `${randomLeft}px`;  // Ubicación horizontal centrada
+        star.style.animationDuration = `${randomDuration}s`; // Duración aleatoria de la animación
+
+        // Agregar la estrella al contenedor
+        starContainer.appendChild(star);
+
+        setTimeout(() => {
+            star.remove();
+        }, randomDuration * 1000); // Eliminar la estrella después de que termine la animación
+    }, 500); // Cada 0.5s aparece una nueva estrella
+});
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
