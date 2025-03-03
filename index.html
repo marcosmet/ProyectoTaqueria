@@ -81,7 +81,7 @@
             <h2 class="p-3 text-left">Comidas</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card animate">
                         <img src="imagenes/enchiladas.jpg" class="card-img-top" alt="Enchiladas">
                         <div class="card-body">
                             <h5 class="card-title text-center">Enchiladas</h5>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card animate">
                         <img src="imagenes/huaraches.jpg" class="card-img-top" alt="Huaraches">
                         <div class="card-body">
                             <h5 class="card-title text-center">Huaraches</h5>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card animate">
                         <img src="imagenes/tacos.jpg" class="card-img-top" alt="Tacos">
                         <div class="card-body">
                             <h5 class="card-title text-center">Tacos</h5>
@@ -118,7 +118,7 @@
                 <h2 class="p-3 text-light">Bebidas</h2>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card animate">
                             <img src="imagenes/cosmoMexicano.png" class="card-img-top" alt="Cosmo Mexicano">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Cosmo Mexicano</h5>
@@ -129,7 +129,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card animate animate">
                             <img src="imagenes/tequilasunrise.png" class="card-img-top" alt="Cosmopolitan">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Cosmopolitan</h5>
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card animate">
                             <img src="imagenes/margarita.png" class="card-img-top" alt="Margarita">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Margarita</h5>
@@ -195,6 +195,36 @@
         </div>
     </div>
 </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const starContainer = document.querySelector(".stars");
+        
+            setInterval(() => {
+                const star = document.createElement("div");
+                star.classList.add("star");
+        
+                // Generar una posición aleatoria centrada
+                const containerWidth = starContainer.offsetWidth;
+                const starWidth = 8;  // El tamaño de la estrella
+                const maxLeft = containerWidth - starWidth;  // Calcular el límite de la posición horizontal
+                const randomLeft = Math.random() * (maxLeft * 0.6) + (maxLeft * 0.2); // Estrellas centradas
+        
+                const randomDuration = Math.random() * 1 + 1; // Duración aleatoria entre 1 y 2 segundos
+        
+                star.style.left = `${randomLeft}px`;  // Ubicación horizontal centrada
+                star.style.animationDuration = `${randomDuration}s`; // Duración aleatoria de la animación
+        
+                // Agregar la estrella al contenedor
+                starContainer.appendChild(star);
+        
+                setTimeout(() => {
+                    star.remove();
+                }, randomDuration * 1000); // Eliminar la estrella después de que termine la animación
+            }, 500); // Cada 0.5s aparece una nueva estrella
+        });
+        </script>
 
 <!-- Footer -->
 <div class="container m-5" style="border-top: 2px solid rgb(250,80,80); background-color: rgb(35, 20, 15)">
