@@ -1,7 +1,7 @@
 body { background-color: rgb(50, 25, 20); }
-.navbar { background-color: rgb(50, 25, 20); border-bottom: 5px solid rgb(0,170,175);}
+.navbar { background-color: rgb(50, 25, 20); border-bottom: 2px solid rgb(0,170,175);}
 .navbar-brand, .nav-link { color: white !important; font-weight: bold;}
-.menu-section { background-color: transparent; color: white; padding: 50px 0;  border-top: 5px solid rgb(0,170,175);}
+.menu-section { background-color: transparent; color: white; padding: 50px 0;  border-top: 2px solid rgb(0,170,175);}
 .form-section { background-color: transparent; color: white; padding: 50px 0; border: 2px solid rgb(250,80,80)}
 .btn-light { background-color: #E9C46A; color: black; font-weight: bold; }
 .animate { transition: transform 0.3s ease-in-out; }

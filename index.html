@@ -7,17 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body style="margin-top: 100px;">
+<body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg d-none d-lg-flex sticky-top shadow">
     <div class="container-fluid d-flex justify-content-between align-items-center p-3 px-5">
         <!-- Logo completamente a la izquierda -->
         <img src="logo.png" class="d-block" alt="Logo" style="width: 10%;">
-
-        <!-- Botón hamburguesa para pantallas pequeñas -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
         <!-- Menú centrado -->
         <div class="collapse navbar-collapse d-flex justify-content-between w-100 px-5" id="navbarNav">
@@ -29,6 +24,26 @@
         </div>
     </div>
 </nav>
+
+<!-- Navbar para Pantallas Pequeñas -->
+<nav class="navbar fixed-top d-lg-none p-3">
+    <div class="container-fluid">
+        <button class="navbar-toggler bg-body-tertiary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: rgb(50, 25, 20)";>
+            <img src="logo.png" class="d-block p-3" alt="Logo" style="width: 50%;">
+            <div class="offcanvas-body"  style="background-color: rgb(50, 25, 20)">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link fs-5" href="#menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="#reservar">Reservar</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="#ubicacion">Ubicación</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
 
 <!-- Slider -->
 <div class="container d-flex justify-content-center align-items-center">
@@ -61,7 +76,7 @@
         <div class="row align-items-center position-relative">
             <!-- Imagen izquierda -->
             <div class="col-3 ps-3">
-                <img src="imagenes/decoIsq.png" class="img-fluid" style="max-width: 150px;" alt="deco izquierda">
+                <img src="imagenes/decoIsq.png" class="img-fluid d-none d-lg-block" style="max-width: 150px;" alt="deco izquierda">
             </div>
             
             <!-- Título Menú -->
@@ -71,7 +86,7 @@
             
             <!-- Imagen derecha -->
             <div class="col-3 pe-3">
-                <img src="imagenes/decoDer.png" class="img-fluid" style="max-width: 150px;" alt="deco derecha">
+                <img src="imagenes/decoDer.png" class="img-fluid d-none d-lg-block" style="max-width: 150px;" alt="deco derecha">
             </div>
         </div>
     </div>
@@ -95,7 +110,7 @@
                         <img src="imagenes/huaraches.jpg" class="card-img-top" alt="Huaraches">
                         <div class="card-body">
                             <h5 class="card-title text-center">Huaraches</h5>
-                            <p class="card-text text-center">Masa de maíz con frijoles, cubierto de carne, lechuga, queso y salsa.</p>
+                            <p class="card-text text-center">Masa de maíz con frijoles, cubierto de carne, lechuga, queso y salsa a eleccion.</p>
                             <p class="card-text text-center"><strong>$85</strong></p>
                         </div>
                     </div>
@@ -154,18 +169,104 @@
         </div>
 </section>
 
+
+
+<div class="container my-5 text-white" style="background-color: rgb(35, 20, 15); border-radius: 3rem;">
+    <h2 class="text-center mb-4 p-3" style="border-bottom:2px solid rgb(0,170,175) ;">Nuestra Ubicación</h2>
+    <div class="row">
+        <!-- Columna de la dirección y descripción -->
+        <div class="col-lg-6 mb-4 d-flex flex-column justify-content-center align-items-start">
+            <h4>Dirección:</h4>
+            <p>City, Arístides Villanueva 321, M5500 Mendoza</p>
+            <p>¡Visítanos y disfruta de nuestros servicios! Estamos ubicados en el corazón de la ciudad.</p>
+
+            <div class="row">
+                <div class="container-fluid p-4" style="background-color: rgb(35, 20, 15); border-bottom-right-radius: 3rem; border-bottom-left-radius: 3rem;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card animate">
+                                    <img src="imagenes/restaurante1.jpg" class="card-img-top img-thumbnail" alt="Restaurante" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="imagenes/restaurante1.jpg">
+                                </div>
+                            </div>
+            
+                            <div class="col-md-4">
+                                <div class="card animate">
+                                    <img src="imagenes/restaurante2.jpg" class="card-img-top img-thumbnail" alt="Restaurante" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="imagenes/restaurante2.jpg">
+                                </div>
+                            </div>
+            
+                            <div class="col-md-4">
+                                <div class="card animate">
+                                    <!-- Añadir data-bs-toggle y quitar uno de los data-bs-target -->
+                                    <img src="imagenes/restaurante3.jpg" class="card-img-top img-thumbnail" alt="Restaurante" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="imagenes/restaurante3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Columna del mapa usando iframe -->
+        <div class="col-lg-6 mb-4">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.2250585408287!2d-68.85118990999736!3d-32.89221736996633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09065594192b%3A0x9ab599499268a70e!2sTaco%20Azteca!5e0!3m2!1ses!2sar!4v1741074061156!5m2!1ses!2sar" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+    
+<!-- Modal para ver la imagen grande -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content align-items-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Imagen Grande</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Imagen grande, el src se cambiará dinámicamente con JS -->
+                <img src="" class="img-fluid" alt="Imagen Grande" id="modalImage">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Script para cambiar la imagen del modal -->
+<script>
+    // Obtener la referencia a la imagen que se muestra en el modal
+    var modalImage = document.getElementById('modalImage');
+    
+    // Seleccionar todas las imágenes con data-bs-toggle="modal"
+    var images = document.querySelectorAll('img[data-bs-toggle="modal"]');
+
+    // Añadir un evento para cambiar la imagen del modal al hacer clic en cualquiera de las imágenes
+    images.forEach(function(image) {
+        image.addEventListener('click', function() {
+            // Obtener la URL de la imagen de la propiedad data-bs-src
+            var src = image.getAttribute('data-bs-src');
+            // Asignar la URL de la imagen grande al modal
+            modalImage.src = src;
+        });
+    });
+</script>
+
 <!-- Reservar -->
 <section id="reservar" class="form-section text-center w-100 mt-5">
     <h2>Reservar una Mesa</h2>
     <div class="container">
         <div class="row align-items-center">
             <!-- Imagen izquierda -->
-            <div class="col-12 col-md-2 d-flex justify-content-start">
+            <div class="col-md-2 d-flex justify-content-start d-none d-lg-block">
                 <img src="imagenes/imgForDer.png" class="d-block w-50" alt="Comida Mexicana">
             </div>
 
             <!-- Formulario -->
-            <div class="col-12 col-md-8 d-flex flex-column align-items-center">
+            <div class="col-md-12 col-lg-8 d-flex flex-column align-items-center">
                 <form class="w-75" action="" method="POST">
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Nombre" required>
@@ -189,7 +290,7 @@
             </div>
 
             <!-- Imagen derecha -->
-            <div class="col-12 col-md-2 d-flex justify-content-end">
+            <div class="col-12 col-md-2 d-flex justify-content-end d-none d-lg-block">
                 <img src="imagenes/imgForIsq.png" class="d-block w-50" alt="">
             </div>
         </div>
@@ -241,7 +342,6 @@
         </ul>
     </footer>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
