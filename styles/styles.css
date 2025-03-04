@@ -1,7 +1,7 @@
 body { background-color: rgb(50, 25, 20); }
 .navbar { background-color: rgb(50, 25, 20); border-bottom: 2px solid rgb(0,170,175);}
 .navbar-brand, .nav-link { color: white !important; font-weight: bold;}
-.menu-section { background-color: transparent; color: white; padding: 50px 0;  border-top: 2px solid rgb(0,170,175);}
+.menu-section { background-color: transparent; color: white; padding: 50px 0;  border-top: 2px solid rgb(0,170,175); border-bottom: 2px solid rgb(250,80,80);}
 .form-section { background-color: transparent; color: white; padding: 50px 0; border: 2px solid rgb(250,80,80)}
 .btn-light { background-color: #E9C46A; color: black; font-weight: bold; }
 .animate { transition: transform 0.3s ease-in-out; }
@@ -43,3 +43,48 @@ body { background-color: rgb(50, 25, 20); }
         transform: translate(0, -100px) scale(0.5);  /* Movimiento hacia arriba */
     }
 }
+
+.scrollimagen{
+view-timeline-name: --reveal;
+animation-name: show;
+animation-fill-mode: both;
+animation-timeline: --reveal;
+animation-range: entry 40% cover 60%;
+
+}
+
+
+.scrollimagen2{
+    view-timeline-name: --reveal;
+    animation-name: show2;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 30%;
+    
+    }
+
+@keyframes show {
+    
+from{
+    opacity: 0;
+}
+
+to{
+    opacity: 1; 
+}
+}
+
+
+
+@keyframes show2 {
+    
+    from{
+        scale: 0%;
+    }
+    
+    to{
+        scale: 100%; 
+    }
+    
+    
+    }
